@@ -1,0 +1,50 @@
+{
+    "name": "penumbra",
+    "displayName": "Penumbra",
+    "license": "MIT",
+    "publisher": "PenumbraTheme",
+    "description": "Perceptually uniform color theme, inspired by sun and shade in nature",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.57.0"
+    },
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#24272B",
+        "theme": "dark"
+    },
+    "bugs": {
+        "url": "https://github.com/nealmckee/penumbra_vscode/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nealmckee/penumbra_vscode.git"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Penumbra Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/penumbra-dark-color-theme.json"
+            },
+            {
+                "label": "Penumbra Light",
+                "uiTheme": "vs",
+                "path": "./themes/penumbra-light-color-theme.json"
+            },
+            {
+                "label": "Penumbra Dark Contrast+",
+                "uiTheme": "vs-dark",
+                "path": "./themes/penumbra-dark+-color-theme.json"
+            },
+            {
+                "label": "Penumbra Dark Contrast++",
+                "uiTheme": "vs-dark",
+                "path": "./themes/penumbra-dark++-color-theme.json"
+            }
+        ]
+    }
+}

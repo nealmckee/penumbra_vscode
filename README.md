@@ -57,7 +57,7 @@ Coming Soon
 
 ## Contributions
 
-See the main [Penumbra repository](https://github.com/altercation/solarized).
+See the main [Penumbra repository](https://github.com/nealmckee/penumbra).
 
 ## Acknowledgments
 

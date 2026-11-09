@@ -1867,7 +1867,7 @@
     "list.hoverBackground": "#fffdfb",
     "list.hoverForeground": "#636363",
     "list.activeSelectionBackground": "#303338",
-    "list.activeSelectionForeground": "#8f8f8f",
+    "list.activeSelectionForeground": "#bebebe",
     "tree.indentGuidesStroke": "#fffdfb",
     "list.dropBackground": "#fffdfb",
     "list.highlightForeground": "#00a0ba",

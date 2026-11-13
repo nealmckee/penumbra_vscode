@@ -4,13 +4,13 @@
     "license": "MIT",
     "publisher": "PenumbraTheme",
     "description": "Perceptually uniform color theme, inspired by sun and shade in nature",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "engines": {
         "vscode": "^1.57.0"
     },
     "icon": "images/icon.png",
     "galleryBanner": {
-        "color": "#24272B",
+        "color": "#202225",
         "theme": "dark"
     },
     "bugs": {

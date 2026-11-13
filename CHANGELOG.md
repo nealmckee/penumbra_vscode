@@ -4,6 +4,11 @@ All notable changes to the "penumbra" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [2.0.0]
+
+- Full v2 overhaul using Revised CAM16-UCS with Helmholtz–Kohlrausch brightness compensation
+- Contrast-symmetric dark and light workbench UI hierarchy and full LSP semantic token support
+
 ## [1.0.0]
 
 - Fix contrast of active list selection foreground across dark and light themes

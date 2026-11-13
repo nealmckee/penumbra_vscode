@@ -1,12 +1,10 @@
 ![header with theme code example](./images/penumbra_example_header.png)
 
-# VSCode Theme Using the Penumbra Color Scheme
+# VS Code Theme Using the Penumbra Colour Scheme
 
-Penumbra is a mathematically balanced colour scheme constructed in a perceptually uniform colour space with base colours inspired by the shades of colour occuring in nature due to the light of the sun and the sky. It cleanly separates the perceptual properties of colours while optimally utilising the available colour space of typical displays.
+Penumbra is an ergonomically designed, mathematically balanced colour scheme constructed in a perceptually uniform colour appearance space for customizable user interfaces and text editors. It cleanly separates the perceptual properties of colour (lightness, chroma and hue) while optimally utilizing the available colour space of typical displays.
 
-The nine base colours are (almost fully, see below) symmetric and used to build the main light and dark theme, drawing from differently sized accent colour palettes as necessary. Additionally, there are two variants of the dark theme with enhanced contrast, ideal for anyone with mild to moderate visual impairments. Due to the constraints of the design principles, none are particularly suitable for people with colour vision deficiency.
-
-The accent colour palettes also lend themselves to encoding quantitative information in data visualisations.
+The nine base colours follow the natural transition of daylight from sunlit surfaces through neutral daylight into cool sky-lit shade. They are used to build the main light and dark themes, alongside two variants of the dark theme with enhanced contrast (`Penumbra Dark Contrast+` and `Penumbra Dark Contrast++`), ideal for bright ambient environments or anyone with mild to moderate visual impairments. Due to the constraints of the design principles, none of the variants are suitable for people with colour vision deficiency.
 
 ![penumbra base balanced swatch](./images/penumbra_swatch_base_balanced.png)
 ![penumbra dark balanced swatch](./images/penumbra_swatch_dark_balanced.png)
@@ -14,24 +12,36 @@ The accent colour palettes also lend themselves to encoding quantitative informa
 
 ## Features
 
-The goal of this colour scheme is to cleanly separate the use of each of the three perceptual properties of colour — luminance, chroma and hue — and optimally utilise the typically available colour space to encode information with each of them. Function is put before aesthetics, but the base colours inspired by nature and low but sufficient contrast attempt to make the overall scheme pleasing to the eye. 
+The goal of this colour scheme is to cleanly separate the use of each of the three perceptual properties of colour (lightness, chroma and hue) and optimally utilize the typically available colour space to encode information with each of them. Ergonomics and function are put before aesthetics, though the base colours modelled after natural daylight and low but sufficient contrast attempt to make the overall scheme pleasing to the eye.
 
-### 1. Base Colours Inspired By Nature
-The base colours are derived from the CIE D series of standard illuminants that are modeled after natural daylight (and also used to calibrate the white point of almost all consumer displays), ranging from the evening sun through neutrally white summer daylight to shade and overcast skies. Dark colours appearing like shade and light colours like paper illuminated by sunlight creates an overall pleasing aesthetic that still fades into the background as that’s what you are used to when going outside.
+### 1. Biophilic Base Colours
+
+Human vision evolved outdoors under natural daylight, where sunlit surfaces are warm and shadows are cooled by diffuse light from the sky. Penumbra's base colours follow the CIE daylight locus continuously from warm direct sunlight through neutral daylight (CIE D65, the standard white point of consumer displays) into cool sky shade. Dark colours appearing like open shade and light colours like sunlit matte paper create a familiar, biophilic visual environment that fades into the background as that is what you are used to when going outside.
 
 ### 2. Just Enough Contrast
-Designed to exactly meet the minimum contrast level for legibility on electronic visual displays specified in ISO-9241-3. While legibility is important to reduce eye strain, for many people, too much contrast is also subjectively contributing to it. Enhanced contrast versions -- for anyone with mild or moderate visual impairments respectively -- exceed the minimum contrast recommended by the W3C.
 
-### 3. Optimal Hue Differentiability
-By using the perceptually uniform colour space [Oklab](https://bottosson.github.io/posts/oklab), I was able to achieve perceptually uniform hue differences between each of the accent colours, ensuring maximum differentiability between highlighted words. Constant chroma ensures none of them stand out from or recede into the page more than others.
+In psychophysical reading studies, reading speed reaches near-maximal levels around a luminance ratio of 3:1 – the minimum display legibility threshold specified in ISO-9241-3 – with strongly diminishing returns above it. While legibility is important to reduce eye strain, for many people, excessive contrast on dense, repetitive lines of text also contributes to visual stress and pattern glare. Penumbra places its main text-to-background contrast right at this threshold, with two enhanced contrast dark variants available when ambient lighting or eyesight call for greater separation.
 
- ### 4. Fluidly Readable Code
-Because the text and accent colours have identical luminance, it’s easier to read code like a continous text and follow logical syntax while maintaining the ability to scan it for highlighted words with higher chroma.
+### 3. Fluidly Readable Code and Semantic Highlighting
 
-### 5. Easily Nameable Colours
-Within the constraints described above, the colour hues are optimised to produce colours as close as possible to intuitively named colours as found in the [xkcd Color Survey](https://blog.xkcd.com/2010/05/03/color-survey-results/). This makes communicating about the colours just that tiny bit easier and quicker.
+Resolving fine character shapes and tracking smoothly along a line of text rely primarily on luminance contrast, whereas chroma and hue excel at visual search and grouping across the page. Because the main text and all accent colours share the same perceived lightness within the colour appearance model, it is easier to read code like continuous text and follow logical structure without brightness differences between words disrupting the flow, while maintaining the ability to scan for highlighted tokens.
 
-## images
+The VS Code themes pair full LSP semantic token support with Penumbra's 7-colour accent palette and upright typography (avoiding italics):
+* **Variables, Parameters & Punctuation (`sky`, neutral):** Over half of source code tokens stay in neutral foreground grey to prevent chromatic clutter, letting structural landmarks stand out.
+* **Comments (`sky-` / `sky+`):** De-emphasized purely through reduced lightness contrast rather than competing hues or italics.
+* **Functions (`blue`) vs. Types (`yellow`):** Assigned to opposite ends of the yellow–blue opponent axis for clear separation in type-annotated signatures.
+* **Operators (`cyan`) vs. Numbers & Booleans (`orange`):** Paired across the chromatic origin so operators and numeric literals alternate cleanly in mathematical expressions.
+* **Keywords (`purple`), Strings (`green`) & Macros/Specials (`red`):** Consistently separate control flow, text literals and meta-programming constructs across languages.
+
+### 4. Optimal Hue Differentiability
+
+By using the [Revised CAM16-UCS](https://doi.org/10.1002/col.22792) colour appearance model together with its [Helmholtz–Kohlrausch extension](https://doi.org/10.1002/col.22793), Penumbra achieves equal perceptual hue steps and equal modelled brightness across all accent colours, adapted separately for dark and light backgrounds. Saturated colours appear brighter to the human eye than a neutral grey of the same physical luminance (the Helmholtz–Kohlrausch effect); compensating for this effect ensures that none of the accent colours stand out from or recede into the page more than others.
+
+### 5. Perceptually Anchored Hues
+
+Within the constraints of equal hue spacing and constant chroma, the hue rotation of each palette is aligned to minimize the angular distance to the four psychological unique hues of human opponent colour vision in CAM16: red, yellow, green and blue. This anchors the palettes directly in the colour appearance model rather than relying on culturally specific colour naming surveys, while the equal hue spacing naturally places the remaining colours in the intermediate regions (orange, cyan, purple).
+
+## Examples
 
 ### Dark
 ![dark theme code example](./images/penumbra_example_dark.png)
@@ -47,13 +57,11 @@ Within the constraints described above, the colour hues are optimised to produce
 
 ## Also Available For
 
-### Editors and IDEs
+Terminal emulators (iTerm2, Ghostty, Kitty, Alacritty, WezTerm, Warp, Windows Terminal), editors (Vim/Neovim, Helix, Sublime Text/`tmTheme`), Julia (`OhMyREPL.jl`), CLI tools and design palettes are available in the main [Penumbra repository](https://github.com/nealmckee/penumbra).
 
-Coming Soon
+## Releases & Legacy Versions
 
-### Terminal Emulators
-
-* **iTerm2**
+The original Oklab-based release of the VS Code theme is preserved under tag [`v1.0.0`](https://github.com/nealmckee/penumbra_vscode/releases/tag/v1.0.0).
 
 ## Contributions
 
@@ -63,8 +71,12 @@ See the main [Penumbra repository](https://github.com/nealmckee/penumbra).
 
 The search for a theme led me to [Solarized](https://github.com/altercation/solarized) by Ethan Schoonover, which I was ultimately not satisfied with but inspired me to try and improve on its ideas.
 
-[Oklab](https://bottosson.github.io/posts/oklab/) by Björn Ottosson gave me the tools to be able to painlessly design the colours.
+[Oklab](https://bottosson.github.io/posts/oklab/) by Björn Ottosson gave me the tools to design the first version of the colours, and the work of Luke Hellwig, Dale Stolitzka and Mark D. Fairchild on [Revised CAM16-UCS](https://doi.org/10.1002/col.22792) and its [Helmholtz–Kohlrausch extension](https://doi.org/10.1002/col.22793) provided the foundation for v2.
 
-The [xkcd Color Survey](https://blog.xkcd.com/2010/05/03/color-survey-results/) provided a quantitative basis for colour names.
+[Colors.jl](https://github.com/JuliaGraphics/Colors.jl) for the Julia language made it effortless to work with colour spaces in a systematic way.
 
-[Pluto Notebooks](https://github.com/fonsp/Pluto.jl) with [Colors.jl](https://github.com/JuliaGraphics/Colors.jl) for the Julia language made it effortless to work with colour in a systematic but visual way.
+Large language models were used for coding assistance, generating the theme files and updating the documentation for v2.
+
+## License
+
+Released under the [MIT License](LICENSE.txt).

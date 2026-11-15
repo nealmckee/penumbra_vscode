@@ -4,7 +4,7 @@
     "license": "MIT",
     "publisher": "PenumbraTheme",
     "description": "Perceptually uniform color theme, inspired by sun and shade in nature",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "engines": {
         "vscode": "^1.57.0"
     },

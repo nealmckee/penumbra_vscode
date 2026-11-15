@@ -4,6 +4,12 @@ All notable changes to the "penumbra" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [2.1.0]
+
+- Lift `sky` and re-anchor the daylight curve for `Contrast+` and `Contrast++` dark themes alongside recalculated dark accent palettes
+- Switch syntax highlighting and extension icon to the 8-colour accent palette with polygon chroma maximization
+- Use the equidistant 6-colour palette for `terminal.ansi*` and map `ansiWhite`/`ansiBrightWhite` to `sun`/`sun+`
+
 ## [2.0.0]
 
 - Full v2 overhaul using Revised CAM16-UCS with Helmholtz–Kohlrausch brightness compensation

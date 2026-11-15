@@ -20,39 +20,38 @@ Human vision evolved outdoors under natural daylight, where sunlit surfaces are 
 
 ### 2. Just Enough Contrast
 
-In psychophysical reading studies, reading speed reaches near-maximal levels around a luminance ratio of 3:1 – the minimum display legibility threshold specified in ISO-9241-3 – with strongly diminishing returns above it. While legibility is important to reduce eye strain, for many people, excessive contrast on dense, repetitive lines of text also contributes to visual stress and pattern glare. Penumbra places its main text-to-background contrast right at this threshold, with two enhanced contrast dark variants available when ambient lighting or eyesight call for greater separation.
+In psychophysical reading studies, reading speed reaches near-maximal levels around a luminance ratio of 3:1 – the minimum display legibility threshold specified in ISO-9241-3 – with strongly diminishing returns above it. While legibility is important to reduce eye strain, for many people, excessive contrast on dense, repetitive lines of text also contributes to visual stress and pattern glare. Penumbra places its main text-to-background contrast right at this threshold, with two enhanced contrast dark variants (`Contrast+` and `Contrast++`) available when ambient lighting or eyesight call for greater separation. The enhanced contrast tiers both lower `shade` and lift `sky` symmetrically while re-anchoring the daylight curve so text stays neutral CIE D65 (`6504 K`).
 
 ### 3. Fluidly Readable Code and Semantic Highlighting
 
 Resolving fine character shapes and tracking smoothly along a line of text rely primarily on luminance contrast, whereas chroma and hue excel at visual search and grouping across the page. Because the main text and all accent colours share the same perceived lightness within the colour appearance model, it is easier to read code like continuous text and follow logical structure without brightness differences between words disrupting the flow, while maintaining the ability to scan for highlighted tokens.
 
-The VS Code themes pair full LSP semantic token support with Penumbra's 7-colour accent palette and upright typography (avoiding italics):
-* **Variables, Parameters & Punctuation (`sky`, neutral):** Over half of source code tokens stay in neutral foreground grey to prevent chromatic clutter, letting structural landmarks stand out.
-* **Comments (`sky-` / `sky+`):** De-emphasized purely through reduced lightness contrast rather than competing hues or italics.
-* **Functions (`blue`) vs. Types (`yellow`):** Assigned to opposite ends of the yellow–blue opponent axis for clear separation in type-annotated signatures.
-* **Operators (`cyan`) vs. Numbers & Booleans (`orange`):** Paired across the chromatic origin so operators and numeric literals alternate cleanly in mathematical expressions.
-* **Keywords (`purple`), Strings (`green`) & Macros/Specials (`red`):** Consistently separate control flow, text literals and meta-programming constructs across languages.
+The VS Code themes pair full LSP semantic token support with Penumbra's 8-colour accent palette for syntax highlighting and upright typography (avoiding italics), while integrated terminal ANSI colours (`terminal.ansi*`) use the equally spaced 6-colour palette for maximum hue separation. Variables, parameters and punctuation remain in neutral foreground grey (`sky`) so semantic landmarks stand out without chromatic clutter, and comments are de-emphasized purely through reduced lightness contrast (`sky-` / `sky+`).
 
 ### 4. Optimal Hue Differentiability
 
 By using the [Revised CAM16-UCS](https://doi.org/10.1002/col.22792) colour appearance model together with its [Helmholtz–Kohlrausch extension](https://doi.org/10.1002/col.22793), Penumbra achieves equal perceptual hue steps and equal modelled brightness across all accent colours, adapted separately for dark and light backgrounds. Saturated colours appear brighter to the human eye than a neutral grey of the same physical luminance (the Helmholtz–Kohlrausch effect); compensating for this effect ensures that none of the accent colours stand out from or recede into the page more than others.
 
-### 5. Perceptually Anchored Hues
+### 5. Maximized Gamut Chroma
 
-Within the constraints of equal hue spacing and constant chroma, the hue rotation of each palette is aligned to minimize the angular distance to the four psychological unique hues of human opponent colour vision in CAM16: red, yellow, green and blue. This anchors the palettes directly in the colour appearance model rather than relying on culturally specific colour naming surveys, while the equal hue spacing naturally places the remaining colours in the intermediate regions (orange, cyan, purple).
+Within the constraints of equal hue spacing and uniform perceived lightness, the hue rotation of each discrete palette polygon is chosen to maximize its constant chroma along the exact sRGB gamut boundary. This preserves maximum chroma and categorical discriminability across all eight syntax hues and six terminal ANSI hues without sacrificing brightness balance.
 
 ## Examples
 
 ### Dark
+
 ![dark theme code example](./images/penumbra_example_dark.png)
 
 ### Light
+
 ![light theme code example](./images/penumbra_example_light.png)
 
 ### Dark Contrast+
+
 ![dark contrasty theme code example](./images/penumbra_example_dark_contrast+.png)
 
 ### Dark Contrast++
+
 ![dark high contrast theme code example](./images/penumbra_example_dark_contrast++.png)
 
 ## Also Available For

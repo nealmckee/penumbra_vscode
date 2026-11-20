@@ -4,6 +4,12 @@ All notable changes to the "penumbra" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [2.1.1]
+
+- Add merge conflict, debugger (`debugIcon.*`, stack frame highlights), and test explorer (`testing.icon*`) UI colors
+- Add `decorator` and `*.deprecated` strikethrough LSP semantic token rules
+- Add TextMate scopes for `markup.strikethrough`, `constant.character`, `support.constant`, directives, and annotations
+
 ## [2.1.0]
 
 - Lift `sky` and re-anchor the daylight curve for `Contrast+` and `Contrast++` dark themes alongside recalculated dark accent palettes

@@ -52,11 +52,11 @@ Use the default (`balanced`) themes for typical indoor lighting, and `Contrast+`
 
 ### Dark Contrast+
 
-<img width="812" src="./images/penumbra_example_dark_contrast+.png" alt="dark contrast+ theme code example"/>
+<img width="812" src="./images/penumbra_example_dark_contrast_plus.png" alt="dark contrast+ theme code example"/>
 
 ### Dark Contrast++
 
-<img width="812" src="./images/penumbra_example_dark_contrast++.png" alt="dark contrast++ theme code example"/>
+<img width="812" src="./images/penumbra_example_dark_contrast_plus_plus.png" alt="dark contrast++ theme code example"/>
 
 ## Limitations
 

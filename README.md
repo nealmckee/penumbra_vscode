@@ -64,7 +64,7 @@ Because differences between accent colours are solely in hue at constant perceiv
 
 ## Also Available For
 
-Terminal emulators (iTerm2, Ghostty, Kitty, Alacritty, WezTerm, Warp, Windows Terminal), editors (Vim/Neovim, Helix, Sublime Text/`tmTheme`), Julia (`OhMyREPL.jl`), CLI tools and design palettes are available in the main [Penumbra repository](https://github.com/nealmckee/penumbra).
+Terminal emulators (iTerm2, Ghostty, Kitty, Alacritty, WezTerm, Warp, Windows Terminal), editors (Vim/Neovim, Helix, Sublime Text/`tmTheme`), Julia REPL (`faces.toml`), CLI tools and design palettes are available in the main [Penumbra repository](https://github.com/nealmckee/penumbra).
 
 ## Releases & Legacy Versions
 
